@@ -1,0 +1,27 @@
+// styles for miles
+
+html, 
+body {
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  @include transition(all .2s ease-in-out);
+  color: $gray;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba($gray, .8);
+  }
+}
+
+

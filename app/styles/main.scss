@@ -1,27 +1,45 @@
 // bower:scss
 // endbower
 
+@import 'bourbon';
+@import 'helpers/reset';
+
+// setup
+@import 'helpers/globals';
+@import 'helpers/typography';
+@import 'helpers/animations';
+// @import 'helpers/base';
+
+// layout 
+
+// views
+
+
+html, 
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+  overflow-x: hidden;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  @include transition(all .2s ease-in-out);
+  color: $gray;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba($gray, .8);
   }
 }
+
+
 
 .browserupgrade {
   margin: 0.2em 0;

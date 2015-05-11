@@ -1,0 +1,22 @@
+
+$helvetica: Helvetica, Arial, sans-serif;
+$main-font: $helvetica; 
+
+
+
+body {
+  @include font-size(1.2);
+  color: $black;
+  font-family: $main-font;
+  font-style: normal;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-weight: normal;
+  line-height: 110%;
+}

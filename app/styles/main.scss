@@ -70,17 +70,18 @@ a {
   }
 
   .logo {
-    top: 8%;
+    top: 7%;
     width: 175px;
   }
 
   .tagline {
-    bottom: 8%;
+    bottom: 7.5%;
     width: 443px;
   }
 
   @media screen and (max-width: 900px) {
     @include calc(height, ("100% - 150px"));
+    background-size: auto 125%;
     border: {
       left: 15px solid $white;
       right: 15px solid $white;
@@ -192,6 +193,14 @@ a {
     .right {
       form {
         text-align: center;
+      }
+
+      .fail-message {
+        @include transform(translateX(-50%));
+        position: absolute;
+        left: 50%;
+        right: auto;
+        bottom: -15px;
       }
     }
   }

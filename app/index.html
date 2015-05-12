@@ -34,11 +34,13 @@
         <div class="left">&copy; copyright 2015</div>
         <div class="center"><img src="images/coming-soon.png"></div>
         <div class="right">
-          <form>
-            <label>newsletter</label>
-            <input type="email" placeholder="email address">
+          <form id="signupForm" action="//plume.us10.list-manage.com/subscribe/post-json?u=f9805767ce9c4c1fc9e0a72c5&amp;id=ad4aa76d67&c=?" method="get">
+            <label for="mce-EMAIL">newsletter</label>
+            <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="email address">
             <input type="submit" value="→">
+            <p class="fail-message">Enter a valid email address.</p>
           </form>
+          <p class="success-message">Thanks, go it!</p>
         </div>
       </section>
     </div>

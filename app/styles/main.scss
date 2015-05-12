@@ -50,7 +50,7 @@ a {
 }
 
 .section-splash {
-  background: url('../images/plume-feature-coming-soon.jpg') no-repeat center center;
+  background: $splash url('../images/plume-feature-coming-soon.jpg') no-repeat center center;
   background-size: cover;
   border: {
     left: 30px solid $white;
@@ -115,8 +115,13 @@ a {
     width: 32%;
 
     form {
-      width: 100%;
+      position: relative;
       text-align: right;
+      width: 100%;
+
+      input {
+        outline: none;
+      }
 
       input[type="email"] {
         @include font-size(1.2);
@@ -133,6 +138,21 @@ a {
         border: none;
         cursor: pointer;
       }
+    }
+
+    .fail-message, .success-message {
+      display: none;
+    }
+
+    .fail-message {
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+    }
+
+    .success-message {
+      position: relative;
+      text-align: right;
     }
   }
 

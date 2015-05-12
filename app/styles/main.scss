@@ -128,6 +128,7 @@ a {
 
     img {
       @include animation(fadeIn 1.0s ease-in);
+      @include transform(translateX(-9px));
       width: 150px;
     }
   }
@@ -192,6 +193,12 @@ a {
 
     .left {
       padding-top: 30px;
+    }
+
+    .center {
+      img {
+        @include transform(translateX(0px));
+      }
     }
 
     .right {

@@ -8,6 +8,7 @@ body {
   @include font-size(1.2);
   color: $black;
   font-family: $main-font;
+  font-weight: bold;
   font-style: normal;
 }
 

@@ -18,6 +18,8 @@
 html, 
 body {
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -36,6 +38,56 @@ a {
 
   &:hover {
     color: rgba($gray, .8);
+  }
+}
+
+.container {
+  background: blue;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.section-splash {
+  background: red;
+  border: {
+    left: 30px solid $white;
+    right: 30px solid $white;
+    top: 30px solid $white;
+  }
+  position: absolute;
+  left: 0;
+  @include calc(height, ("100% - 100px"));
+  top: 0;
+  width: 100%;
+}
+
+.section-text {
+  background: white;
+  bottom: 0;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+
+  .left, .center, .right {
+    display: inline-block;
+    height: 100px;
+    width: 33.2%;
+  }
+
+  .left {
+    padding-left: 30px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .right {
+    padding-right: 30px;
   }
 }
 

@@ -50,7 +50,7 @@ a {
 }
 
 .section-splash {
-  background: url('../images/plume-feature-coming-soon-lo.jpg') no-repeat center center;
+  background: url('../images/plume-feature-coming-soon.jpg') no-repeat center center;
   background-size: cover;
   border: {
     left: 30px solid $white;
@@ -62,6 +62,22 @@ a {
   @include calc(height, ("100% - 100px"));
   top: 0;
   width: 100%;
+
+  .logo, .tagline {
+    @include transform(translateX(-50%));
+    left: 50%;
+    position: absolute;
+  }
+
+  .logo {
+    top: 8%;
+    width: 175px;
+  }
+
+  .tagline {
+    bottom: 8%;
+    width: 443px;
+  }
 }
 
 .section-text {

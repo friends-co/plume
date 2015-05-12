@@ -50,6 +50,7 @@ a {
 }
 
 .section-splash {
+  @include calc(height, ("100% - 100px"));
   background: $splash url('../images/plume-feature-coming-soon.jpg') no-repeat center center;
   background-size: cover;
   border: {
@@ -59,7 +60,6 @@ a {
   }
   position: absolute;
   left: 0;
-  @include calc(height, ("100% - 100px"));
   top: 0;
   width: 100%;
 
@@ -77,6 +77,23 @@ a {
   .tagline {
     bottom: 8%;
     width: 443px;
+  }
+
+  @media screen and (max-width: 900px) {
+    @include calc(height, ("100% - 150px"));
+    border: {
+      left: 15px solid $white;
+      right: 15px solid $white;
+      top: 15px solid $white;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .tagline {
+      width: 260px;
+    }
   }
 }
 

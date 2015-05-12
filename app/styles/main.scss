@@ -238,6 +238,10 @@ a {
   text-transform: uppercase;  
 }
 
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
 
 
 .browserupgrade {

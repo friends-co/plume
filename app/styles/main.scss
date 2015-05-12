@@ -42,7 +42,6 @@ a {
 }
 
 .container {
-  background: blue;
   height: 100%;
   left: 0;
   position: fixed;
@@ -51,7 +50,8 @@ a {
 }
 
 .section-splash {
-  background: red;
+  background: url('../images/plume-feature-coming-soon-lo.jpg') no-repeat center center;
+  background-size: cover;
   border: {
     left: 30px solid $white;
     right: 30px solid $white;
@@ -67,15 +67,18 @@ a {
 .section-text {
   background: white;
   bottom: 0;
+  display: table;
   height: 100px;
   left: 0;
   position: absolute;
   width: 100%;
 
   .left, .center, .right {
-    display: inline-block;
+    display: table-cell;
     height: 100px;
-    width: 33.2%;
+    text-transform: uppercase;
+    width: 33.333333333%;
+    vertical-align: middle;
   }
 
   .left {
@@ -83,12 +86,90 @@ a {
   }
 
   .center {
+    text-transform: capitalize;
     text-align: center;
+
+    img {
+      width: 150px;
+    }
   }
 
   .right {
     padding-right: 30px;
+    width: 32%;
+
+    form {
+      width: 100%;
+      text-align: right;
+
+      input[type="email"] {
+        @include font-size(1.2);
+        border: none;
+        color: $black;
+        font-weight: bold;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      input[type="submit"] {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
   }
+
+  @media screen and (max-width: 900px) {
+    display: block;
+    height: 150px;
+
+    .left, .center, .right {
+      display: block;
+      height: auto;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .left {
+      padding-top: 30px;
+    }
+
+    .right {
+      form {
+        text-align: center;
+      }
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  @include font-size(1.2);
+  color: $gray;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  @include font-size(1.2);
+  color: $gray;
+  font-weight: bold;
+  text-transform: uppercase; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  @include font-size(1.2);
+  color: $gray;
+  font-weight: bold;
+  text-transform: uppercase; 
+}
+
+:-ms-input-placeholder {  
+  @include font-size(1.2);
+  color: $gray;
+  font-weight: bold;
+  text-transform: uppercase;  
 }
 
 

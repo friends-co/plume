@@ -128,7 +128,7 @@ a {
 
     img {
       @include animation(fadeIn 1.0s ease-in);
-      @include transform(translateX(-9px));
+      @include transform(translateX(-8px));
       width: 150px;
     }
   }
